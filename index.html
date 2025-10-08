@@ -2,18 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Dropdown List</title>
+    <title>Dropdown Button Style</title>
+    <style>
+        select {
+            appearance: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+        }
+    </style>
+    <script>
+        function goToLink(select) {
+            const url = select.value;
+            if (url) {
+                window.open(url, '_blank');
+            }
+        }
+    </script>
 </head>
 <body>
 
-    <h2>Select a Fruit</h2>
-
-    <select>
-        <option value="">-- Choose a fruit --</option>
-        <option value="<a href="https://reg.gst.gov.in/registration/>gst</a>">Apple</option>
-        <option value="banana">Banana</option>
-        <option value="orange">Orange</option>
-        <option value="grape">Grape</option>
+    <select onchange="goToLink(this)">
+        <option value="">Go to...</option>
+        <option value="https://github.com">GitHub</option>
+        <option value="https://stackoverflow.com">Stack Overflow</option>
+        <option value="https://developer.mozilla.org">MDN Web Docs</option>
     </select>
 
 </body>

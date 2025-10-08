@@ -12,6 +12,24 @@
     </script>
 </head>
 <body>
+    <script>
+    // CHANGE THESE
+    const CORRECT_PASSWORD = 'letmein';             // <-- password (client-side!)
+    const TARGET_URL = 'https://example.com/secret';// <-- destination
+
+    document.getElementById('openBtn').addEventListener('click', () => {
+      const pwd = prompt('Enter password to open the link:');
+      if (pwd === null) return; // user cancelled
+      if (pwd === CORRECT_PASSWORD) {
+        // open in same tab:
+        window.location.href = TARGET_URL;
+        // or to open in new tab use:
+        // window.open(TARGET_URL, '_blank');
+      } else {
+        alert('Incorrect password.');
+      }
+    });
+  </script>
 
     <label for="links">Gst:</label>
     <select id="links" onchange="goToLink(this)">
@@ -40,7 +58,7 @@
         <option value="https://scms.pdsodisha.gov.in/">Scms Login</option>
         <option value="https://www.fciarms.in/">Fci Wings</option>
     </select>
-<br>
+
      <label for="links">convert & merge:</label>
     <select id="links" onchange="goToLink(this)">
         <option value="">-- Select a site --</option>
@@ -54,6 +72,7 @@
         <option value="https://myaadhaar.uidai.gov.in/check-aadhaar-validity/en">Mob no check in adhar</option>
         
     </select>
+    
     
 
 </body>

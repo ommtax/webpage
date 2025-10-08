@@ -2,39 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dropdown Button Style</title>
+    <title>Styled Dropdown Hyperlinks</title>
     <style>
-        select {
-            appearance: none;
-            padding: 10px 15px;
-            font-size: 16px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
         }
-
-        select:focus {
-            outline: none;
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
         }
     </style>
     <script>
         function goToLink(select) {
             const url = select.value;
             if (url) {
-                window.open(url, '_blank');
+                window.open(url, '_blank'); // open in new tab
             }
         }
     </script>
 </head>
 <body>
 
+    <h2>Select a Website</h2>
+
     <select onchange="goToLink(this)">
-        <option value="">Go to...</option>
-        <option value="https://github.com">GitHub</option>
-        <option value="https://stackoverflow.com">Stack Overflow</option>
-        <option value="https://developer.mozilla.org">MDN Web Docs</option>
+        <option value="">-- Choose a site --</option>
+        <option value="https://www.google.com">Google</option>
+        <option value="https://www.facebook.com">Facebook</option>
+        <option value="https://www.twitter.com">Twitter</option>
+        <option value="https://www.wikipedia.org">Wikipedia</option>
     </select>
 
 </body>

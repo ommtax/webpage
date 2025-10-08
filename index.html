@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Styled Dropdown Hyperlinks</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 40px;
-        }
-        select {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Dropdown Hyperlink</title>
     <script>
         function goToLink(select) {
             const url = select.value;
             if (url) {
-                window.open(url, '_blank'); // open in new tab
+                window.location.href = url;
             }
         }
     </script>
 </head>
 <body>
 
-    <h2>Select a Website</h2>
-
-    <select onchange="goToLink(this)">
-        <option value="">-- Choose a site --</option>
+    <label for="links">Choose a website:</label>
+    <select id="links" onchange="goToLink(this)">
+        <option value="">-- Select a site --</option>
         <option value="https://www.google.com">Google</option>
-        <option value="https://www.facebook.com">Facebook</option>
-        <option value="https://www.twitter.com">Twitter</option>
+        <option value="https://www.youtube.com">YouTube</option>
+        <option value="https://www.wikipedia.org">Wikipedia</option>
+    </select>
+
+     <label for="links">Choose a website:</label>
+    <select id="links" onchange="goToLink(this)">
+        <option value="">-- Select a site --</option>
+        <option value="https://www.google.com">Google</option>
+        <option value="https://www.youtube.com">YouTube</option>
         <option value="https://www.wikipedia.org">Wikipedia</option>
     </select>
 

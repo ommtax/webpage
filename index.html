@@ -12,24 +12,7 @@
     </script>
 </head>
 <body>
-    <script>
-    // CHANGE THESE
-    const CORRECT_PASSWORD = 'letmein';             // <-- password (client-side!)
-    const TARGET_URL = 'https://example.com/secret';// <-- destination
-
-    document.getElementById('openBtn').addEventListener('click', () => {
-      const pwd = prompt('Enter password to open the link:');
-      if (pwd === null) return; // user cancelled
-      if (pwd === CORRECT_PASSWORD) {
-        // open in same tab:
-        window.location.href = TARGET_URL;
-        // or to open in new tab use:
-        // window.open(TARGET_URL, '_blank');
-      } else {
-        alert('Incorrect password.');
-      }
-    });
-  </script>
+ 
 
     <label for="links">Gst:</label>
     <select id="links" onchange="goToLink(this)">

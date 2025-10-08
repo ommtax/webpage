@@ -1,34 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dropdown Hyperlink</title>
-    <script>
-        function goToLink(select) {
-            const url = select.value;
-            if (url) {
-                window.location.href = url;
-            }
-        }
-    </script>
+    <meta charset="UTF-8">
+    <title>Simple Dropdown List</title>
 </head>
 <body>
 
-    <label for="links">Choose a website:</label>
-    <select id="links" onchange="goToLink(this)">
-        <option value="">-- Gst --</option>
-        <option value="https://services.gst.gov.in/services/login">Login</option>
-        <option value="https://services.gst.gov.in/services/searchtp">Gst No Check</option>
-        <option value="https://reg.gst.gov.in/registration/">New Gst Apply</option>
-    </select>
+    <h2>Select a Fruit</h2>
 
-     <label for="links">Choose a website:</label>
-    <select id="links" onchange="goToLink(this)">
-        <option value="">-- Gst --</option>
-        <option value="https://services.gst.gov.in/services/login">Login</option>
-        <option value="https://services.gst.gov.in/services/searchtp">Gst No Check</option>
-        <option value="https://reg.gst.gov.in/registration/">New Gst Apply</option>
+    <select>
+        <option value="">-- Choose a fruit --</option>
+        <option value="<a href="https://reg.gst.gov.in/registration/>gst</a>">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="orange">Orange</option>
+        <option value="grape">Grape</option>
     </select>
-      
 
 </body>
 </html>
